@@ -10,6 +10,8 @@ services:
       - SECRET_KEY=your_secret_key
     depends_on:
       - db
+    volumes:
+      - .:/app
 
   db:
     image: postgres:13

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Ensure Docker is running
 if ! systemctl is-active --quiet docker
 then
@@ -12,5 +14,3 @@ cd infrastructure
 
 # Build and start services
 docker-compose up --build -d
-
-echo "Deployment complete. All services are up and running."

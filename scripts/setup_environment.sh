@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Install Poetry if not installed
 if ! command -v poetry &> /dev/null
 then
@@ -12,8 +14,6 @@ fi
 
 # Install dependencies
 echo "Installing dependencies using Poetry..."
-cd infrastructure
 poetry install --no-root
-cd ..
 
 echo "Environment setup complete."

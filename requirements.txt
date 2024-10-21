@@ -1,8 +1,10 @@
 fastapi
-uvicorn
+uvicorn[standard]
 sqlalchemy
 pydantic
-psycopg2
+asyncpg
 alembic
-python-jose
-passlib
+python-jose[cryptography]
+passlib[bcrypt]
+python-json-logger
+poetry
