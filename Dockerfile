@@ -16,10 +16,10 @@ RUN pip install poetry
 WORKDIR /app
 
 # Copy pyproject.toml and poetry.lock
-COPY pyproject.toml poetry.lock ./
+COPY requirements.txt .
 
 # Install dependencies
-RUN poetry install --no-root --no-interaction --no-ansi
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project
 COPY . .
